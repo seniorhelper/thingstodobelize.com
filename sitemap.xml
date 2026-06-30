@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://thingstodobelize.com/</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://thingstodobelize.com/images/belize-things-to-do-for-fun.jpg</image:loc>
+      <image:title>Things to do in Belize</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thingstodobelize.com/images/belize-snorkeling.jpg</image:loc>
+      <image:title>Snorkeling in Belize</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thingstodobelize.com/images/belize-attractions-stingrays.jpg</image:loc>
+      <image:title>Shark Ray Alley stingrays in Belize</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thingstodobelize.com/images/best-beaches-belize.jpg</image:loc>
+      <image:title>Best beaches in Belize</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://thingstodobelize.com/images/beaches-in-belize.jpg</image:loc>
+      <image:title>Beaches in Belize</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://thingstodobelize.com/sitemap.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
