@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,6 @@
 
 <link rel="icon" type="image/png" href="/images/things-to-do-belize-favicon.png">
 <link rel="apple-touch-icon" href="/images/things-to-do-belize-favicon.png">
-<link rel="shortcut icon" href="/images/belize-snorkeling.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -142,13 +142,14 @@ img{max-width:100%;display:block}
 /* ---------- NAV ---------- */
 header.nav{
   position:sticky;top:0;z-index:90;
-  background:#ffffff;
+  background:rgba(250,244,232,.86);
+  backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(10,110,140,.12);
-  box-shadow:0 2px 10px -6px rgba(6,59,84,.25);
 }
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:88px}
-.logo{display:flex;align-items:center;gap:.45rem}
-.logo img{height:76px;width:auto;max-width:290px;display:block}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:'Fraunces',serif;font-weight:900;font-size:1.42rem;letter-spacing:-.02em;color:var(--ink);display:flex;align-items:center;gap:.45rem}
+.logo b{color:var(--coral)}
+.logo .pin{width:14px;height:14px;border-radius:50% 50% 50% 0;background:var(--coral);transform:rotate(-45deg);display:inline-block}
 .nav-links{display:flex;gap:1.7rem;align-items:center}
 .nav-links a{font-weight:500;font-size:.96rem;color:var(--ink);position:relative}
 .nav-links a:hover{color:var(--coral)}
@@ -191,88 +192,6 @@ header.nav{
 .fb2{bottom:14%;left:-4%;animation-delay:1.4s}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 
-/* ---------- FEATURED TOUR ARTICLE (Inland & Sea) ---------- */
-.featured-tour{background:linear-gradient(180deg,#062f43 0%,#04293b 100%);padding:0 0 64px;position:relative;overflow:hidden}
-.featured-tour::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 85% 0%,rgba(25,184,196,.22),transparent 55%),radial-gradient(90% 70% at 0% 100%,rgba(255,178,46,.14),transparent 55%);pointer-events:none}
-.ft-ribbon{position:relative;z-index:2;background:linear-gradient(90deg,var(--coral),var(--mango));color:#fff;text-align:center;padding:.85rem 1rem;font-family:'Space Grotesk',monospace;text-transform:uppercase;letter-spacing:.16em;font-size:.82rem;font-weight:700;display:flex;align-items:center;justify-content:center;gap:.6rem;flex-wrap:wrap}
-.ft-ribbon .star{font-size:1rem}
-.ft-inner{position:relative;z-index:2;padding-top:52px}
-.ft-head{max-width:820px;margin:0 auto 2rem;text-align:center}
-.ft-head .eyebrow{color:var(--mango)}
-.ft-head h2{color:#fff;font-size:clamp(2rem,4.4vw,3.2rem);font-weight:900;margin:.6rem 0 .8rem;line-height:1.05}
-.ft-head h2 .hl{color:var(--lagoon);font-style:italic;font-weight:500}
-.ft-head .ft-sub{color:#bfe3ec;font-size:1.15rem;max-width:60ch;margin:0 auto}
-.ft-stars{display:flex;gap:.3rem;justify-content:center;margin:.8rem 0 0;font-size:1.3rem;color:var(--mango)}
-
-/* Big full-width ad image */
-.ft-ad{position:relative;display:block;margin:2.2rem auto 0;max-width:1000px;border-radius:24px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.75);border:6px solid #fff;transition:.3s}
-.ft-ad:hover{transform:translateY(-5px);box-shadow:0 55px 110px -30px rgba(0,0,0,.85)}
-.ft-ad img{width:100%;height:auto;display:block}
-.ft-ad .ft-adtag{position:absolute;top:1rem;right:1.1rem;z-index:2;font-family:'Space Grotesk',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(6,47,67,.7);padding:.34rem .8rem;border-radius:30px;backdrop-filter:blur(4px)}
-
-/* CTA row under the big ad */
-.ft-cta-row{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin:1.6rem auto 0;max-width:1000px}
-.ft-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:50px;font-weight:700;font-size:1rem;font-family:'Outfit',sans-serif;transition:.2s;box-shadow:0 12px 26px -12px rgba(0,0,0,.6)}
-.ft-btn.call{background:var(--mango);color:var(--ink)}
-.ft-btn.call:hover{background:#ffc24d;transform:translateY(-2px)}
-.ft-btn.site{background:var(--lagoon);color:#fff}
-.ft-btn.site:hover{background:#12a3ae;transform:translateY(-2px)}
-.ft-btn.reviews{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3)}
-.ft-btn.reviews:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
-
-/* Article body */
-.ft-article{max-width:780px;margin:2.6rem auto 0;position:relative;z-index:2}
-.ft-article p{color:#dbeef3;font-size:1.07rem;margin-bottom:1.15rem}
-.ft-article p:first-of-type::first-letter{font-family:'Fraunces',serif;font-weight:900;font-size:3.4rem;float:left;line-height:.8;padding:.35rem .55rem 0 0;color:var(--mango)}
-.ft-article h3{color:#fff;font-size:1.5rem;margin:1.8rem 0 .6rem}
-.ft-pull{margin:1.8rem 0;padding:1.3rem 1.6rem;border-left:4px solid var(--mango);background:rgba(255,255,255,.06);border-radius:0 16px 16px 0}
-.ft-pull p{color:#fff;font-style:italic;font-size:1.18rem;margin:0;font-family:'Fraunces',serif;line-height:1.4}
-.ft-quick{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem auto 0;max-width:780px}
-.ft-quick .q{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1.1rem;text-align:center}
-.ft-quick .q b{display:block;font-family:'Fraunces',serif;color:var(--lagoon);font-size:1.05rem;margin-bottom:.25rem}
-.ft-quick .q span{color:#bfe3ec;font-size:.86rem}
-.ft-contactline{text-align:center;color:#bfe3ec;font-size:.98rem;margin:2rem auto 0;max-width:780px}
-.ft-contactline a{color:var(--mango);font-weight:700}
-
-/* Mid-article inline ad (second placement, smaller framed) */
-.ft-midad{position:relative;display:block;margin:2.4rem auto 0;max-width:820px;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px -28px rgba(0,0,0,.7);border:5px solid #fff;transition:.3s}
-.ft-midad:hover{transform:translateY(-4px)}
-.ft-midad img{width:100%;height:auto;display:block}
-.ft-midad .ft-adtag{position:absolute;top:.9rem;right:1rem;z-index:2;font-family:'Space Grotesk',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(6,47,67,.7);padding:.3rem .75rem;border-radius:30px;backdrop-filter:blur(4px)}
-
-/* ---------- LOWER FULL-WIDTH ADVENTURE AD BAND ---------- */
-.adv-band{background:linear-gradient(160deg,#04293b,#062f43);padding:60px 0}
-.adv-band .eyebrow{color:var(--mango)}
-.adv-band .adv-head{text-align:center;max-width:720px;margin:0 auto 2rem}
-.adv-band h2{color:#fff;font-size:clamp(1.8rem,3.6vw,2.7rem);font-weight:900;margin:.5rem 0 .6rem}
-.adv-band h2 .hl{color:var(--lagoon);font-style:italic;font-weight:500}
-.adv-band .adv-head p{color:#bfe3ec;font-size:1.08rem}
-.adv-ad{position:relative;display:block;margin:0 auto;max-width:1000px;border-radius:24px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.75);border:6px solid #fff;transition:.3s}
-.adv-ad:hover{transform:translateY(-5px)}
-.adv-ad img{width:100%;height:auto;display:block}
-.adv-ad .ft-adtag{position:absolute;top:1rem;right:1.1rem;z-index:2;font-family:'Space Grotesk',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(6,47,67,.7);padding:.34rem .8rem;border-radius:30px;backdrop-filter:blur(4px)}
-
-/* ---------- ICE CREAM AD ---------- */
-.icecream-band{background:var(--white);padding:56px 0}
-.icecream-inner{max-width:940px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;background:linear-gradient(135deg,#fff4ec,#fdeeff);border-radius:24px;padding:1.6rem;box-shadow:var(--shadow);border:1px solid rgba(255,107,74,.15)}
-.icecream-inner .ic-copy .eyebrow{color:var(--coral)}
-.icecream-inner .ic-copy h3{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:900;color:var(--ink);margin:.4rem 0 .7rem;line-height:1.1}
-.icecream-inner .ic-copy p{font-size:1rem;margin-bottom:1rem}
-.ic-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm)}
-.ic-img img{width:100%;height:auto;display:block}
-.ic-img .ft-adtag{position:absolute;top:.8rem;right:.9rem;z-index:2;font-family:'Space Grotesk',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(12,34,48,.6);padding:.3rem .7rem;border-radius:30px}
-
-/* ---------- SOUVENIR SHOP ARTICLE ---------- */
-.souvenir-article{background:var(--white);padding:56px 0}
-.souvenir-article .eyebrow{color:var(--coral)}
-.souvenir-article h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:900;margin:.5rem 0 1.4rem;color:var(--ink);max-width:24ch}
-.souvenir-article .sv-body{max-width:760px}
-.souvenir-article .sv-body p{margin-bottom:1.1rem;font-size:1.06rem}
-.souvenir-article .sv-body a{color:var(--reef);font-weight:600}
-.sv-flyer{position:relative;margin:1.8rem 0;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(10,110,140,.12)}
-.sv-flyer img{width:100%;height:auto;display:block}
-.sv-flyer .sv-tag{position:absolute;top:1rem;right:1.1rem;z-index:2;font-family:'Space Grotesk',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(12,34,48,.6);padding:.32rem .75rem;border-radius:30px;backdrop-filter:blur(4px)}
-
 /* ---------- SEARCH TOOL ---------- */
 .searchbox{
   margin-top:2.2rem;background:#fff;border-radius:22px;padding:1.5rem;box-shadow:var(--shadow);
@@ -308,7 +227,7 @@ section{padding:78px 0}
 .intro{background:var(--white)}
 .intro .wrap{display:grid;grid-template-columns:1.4fr .9fr;gap:48px;align-items:start}
 .intro p{margin-bottom:1.1rem}
-.quickfacts{background:linear-gradient(160deg,var(--reef-deep),var(--reef));color:#fff;border-radius:22px;padding:1.8rem;box-shadow:var(--shadow);position:sticky;top:104px}
+.quickfacts{background:linear-gradient(160deg,var(--reef-deep),var(--reef));color:#fff;border-radius:22px;padding:1.8rem;box-shadow:var(--shadow);position:sticky;top:90px}
 .quickfacts h3{color:#fff;font-size:1.25rem;margin-bottom:1rem}
 .quickfacts dl{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1rem}
 .quickfacts dt{font-family:'Space Grotesk',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--mango);align-self:center}
@@ -400,7 +319,7 @@ section{padding:78px 0}
 .tip-block{margin-bottom:2rem}
 .tip-block h3{font-size:1.45rem;margin-bottom:.5rem;color:var(--ink);display:flex;align-items:center;gap:.6rem}
 .tip-block h3 .ic{width:34px;height:34px;border-radius:10px;background:var(--sand);display:inline-flex;align-items:center;justify-content:center;font-size:1.1rem}
-.sky{position:sticky;top:104px}
+.sky{position:sticky;top:90px}
 .ad-sky{background:linear-gradient(180deg,var(--jungle),var(--reef-deep));border-radius:18px;padding:1.6rem;color:#fff;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
 .ad-sky .lab{font-family:'Space Grotesk',monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#bfe3ec;margin-bottom:1rem}
 .ad-sky .big{font-family:'Fraunces',serif;font-weight:900;font-size:1.7rem;line-height:1.1;margin-bottom:.6rem}
@@ -430,8 +349,8 @@ section{padding:78px 0}
 footer{background:var(--ink);color:#cdd9e0;padding:60px 0 26px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
 footer h4{color:#fff;font-family:'Fraunces',serif;font-size:1.05rem;margin-bottom:1rem}
-.foot-logo-wrap{background:#fff;border-radius:16px;padding:14px 16px;display:inline-block;margin-bottom:.9rem;box-shadow:var(--shadow-sm)}
-.foot-logo-wrap img{height:64px;width:auto;max-width:250px;display:block}
+footer .flogo{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;color:#fff;margin-bottom:.7rem}
+footer .flogo b{color:var(--coral)}
 footer p{color:#9fb3c0;font-size:.92rem}
 footer ul{list-style:none}
 footer li{margin-bottom:.5rem}
@@ -462,13 +381,9 @@ footer a:hover{color:var(--mango)}
   .tips-grid{grid-template-columns:1fr}
   .sky{position:static;max-width:420px;margin:0 auto}
   .foot-grid{grid-template-columns:1fr 1fr}
-  .icecream-inner{grid-template-columns:1fr}
-  .ft-quick{grid-template-columns:1fr}
 }
 @media(max-width:680px){
-  .nav-inner{height:76px}
-  .logo img{height:60px;max-width:220px}
-  .nav-links{position:fixed;top:76px;left:0;right:0;background:#fff;flex-direction:column;padding:1.4rem;gap:1rem;box-shadow:var(--shadow);transform:translateY(-150%);transition:.3s;z-index:80}
+  .nav-links{position:fixed;top:70px;left:0;right:0;background:var(--sand-soft);flex-direction:column;padding:1.4rem;gap:1rem;box-shadow:var(--shadow);transform:translateY(-150%);transition:.3s;z-index:80}
   .nav-links.open{transform:translateY(0)}
   .burger{display:flex}
   .card-grid{grid-template-columns:1fr}
@@ -478,7 +393,6 @@ footer a:hover{color:var(--mango)}
   .search-line{flex-direction:column}
   .float-badge{display:none}
   section{padding:56px 0}
-  .ft-ad,.adv-ad{border-width:4px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}.photo-stack{transform:none}}
 </style>
@@ -487,9 +401,7 @@ footer a:hover{color:var(--mango)}
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="/" class="logo" aria-label="Things To Do In Belize home">
-      <img src="/images/belize-snorkeling.jpg" alt="Things To Do In Belize logo">
-    </a>
+    <a href="/" class="logo"><span class="pin"></span>Things To Do <b>Belize</b></a>
     <nav class="nav-links" id="navLinks">
       <a href="#top-things">Top Things</a>
       <a href="#regions">Where To Go</a>
@@ -512,7 +424,7 @@ footer a:hover{color:var(--mango)}
       <div class="trust-row">
         <div><b>50+</b>Activities mapped</div>
         <div><b>#2</b>Largest reef on Earth</div>
-        <div><b>5&ndash;7</b>Perfect trip length, days</div>
+        <div><b>5–7</b>Perfect trip length, days</div>
       </div>
 
       <!-- ===== HERO SEARCH TOOL ===== -->
@@ -520,7 +432,7 @@ footer a:hover{color:var(--mango)}
         <h3>What do you want to do in Belize?</h3>
         <div class="sub">Type a vibe or activity. We'll match you with the best things to do.</div>
         <div class="search-line">
-          <input type="text" id="actSearch" placeholder="Try &ldquo;snorkeling&rdquo;, &ldquo;ruins&rdquo;, &ldquo;family&rdquo;, &ldquo;adventure&rdquo;..." autocomplete="off">
+          <input type="text" id="actSearch" placeholder="Try “snorkeling”, “ruins”, “family”, “adventure”..." autocomplete="off">
           <button class="search-btn" id="searchGo">Search</button>
         </div>
         <div class="chips" id="chips">
@@ -549,94 +461,6 @@ footer a:hover{color:var(--mango)}
   </div>
 </section>
 
-<!-- ============ FEATURED TOUR ARTICLE + BIG AD (Inland & Sea) ============ -->
-<section class="featured-tour" id="featured-tour">
-  <div class="ft-ribbon">
-    <span class="star">&#9733;</span> Our #1 Tour Recommendation in Belize <span class="star">&#9733;</span>
-  </div>
-  <div class="wrap ft-inner">
-    <div class="ft-head">
-      <span class="eyebrow">Editor's Pick &middot; San Pedro Adventure Tours</span>
-      <h2>The best day we spent in Belize was on the water with <span class="hl">Inland &amp; Sea</span></h2>
-      <p class="ft-sub">Of every experience we had in Belize, this snorkeling adventure to Hol Chan and Shark Ray Alley was the one we couldn't stop talking about. Here's why we recommend them above all others.</p>
-      <div class="ft-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    </div>
-
-    <!-- BIG FULL-WIDTH AD (placement 1 of 2) -->
-    <a href="https://inlandandsea.com/" target="_blank" rel="noopener" class="ft-ad">
-      <span class="ft-adtag">Sponsored &middot; San Pedro Adventure Tours</span>
-      <img src="/images/san-pedro-adventure-tours.png" alt="San Pedro Adventure Tours by Inland and Sea, snorkeling trips to Hol Chan Marine Reserve and Shark Ray Alley in Belize">
-    </a>
-
-    <div class="ft-cta-row">
-      <a href="tel:+50126029434" class="ft-btn call">&#128222; Call +501-602-9434</a>
-      <a href="https://inlandandsea.com/" target="_blank" rel="noopener" class="ft-btn site">&#127758; inlandandsea.com</a>
-      <a href="https://share.google/Vn0x0nW3IYNnWDuLs" target="_blank" rel="noopener" class="ft-btn reviews">&#11088; Read Google Reviews</a>
-    </div>
-
-    <!-- ARTICLE -->
-    <article class="ft-article">
-      <p>If you only book one guided experience on your entire trip, make it this one. After days of exploring Belize by land and sea, the snorkeling adventure we took with Inland &amp; Sea, better known around the island as San Pedro Adventure Tours, stood head and shoulders above everything else we did. It was, hands down, the best of all our Belizean experiences, and it's the reason we now point every traveler who asks us "what should we actually do in Belize?" straight to this crew.</p>
-
-      <p>They sent us out to some of the most beautiful and carefully protected reefs in the world, the kind of places that remind you why the Belize Barrier Reef has a reputation that circles the globe. The water was impossibly clear, the coral alive with color, and the whole day felt less like a tour and more like being let in on a local secret. From the moment we stepped on board, it was obvious this was a team that genuinely loves what they do.</p>
-
-      <div class="ft-pull">
-        <p>&ldquo;Out of all of our Belizean experiences, this has been the best by far. Snorkeling with nurse sharks and eagle rays was an experience like no other.&rdquo;</p>
-      </div>
-
-      <h3>Hol Chan &amp; Shark Ray Alley: the main event</h3>
-      <p>The highlight was snorkeling Hol Chan Marine Reserve and the famous Shark Ray Alley. Slipping into the water alongside gentle nurse sharks and gliding eagle rays is the sort of thing you expect to see in a documentary, not from arm's length on an ordinary vacation day. Our guides knew exactly where to take us and what we were looking at, and they made even the more nervous swimmers in our group feel completely at ease. It was thrilling and calm at the same time, which is a hard balance to strike.</p>
-
-      <h3>A team that puts your safety first</h3>
-      <p>What really set them apart, though, was the crew. The staff was truly top notch, endlessly friendly, and clearly professional in every way. They put the safety of everyone first from start to finish, taking the time to brief us properly and keep a watchful eye on the whole group in the water. Between snorkel stops, they shared the history and geography of the area, so we came away understanding the reef, not just floating over it. That mix of fun and genuine care is rare.</p>
-
-      <p>The owner, Eric, is the kind of host who makes the difference. He's warm, welcoming, and goes out of his way to make sure every single person on the boat has a great time. You get the sense he takes real pride in showing off his corner of the Caribbean, and it shows in every detail of the trip. By the time we motored back to San Pedro, sun-tired and grinning, we'd already decided this was the memory we'd be telling people about back home.</p>
-
-      <h3>Why we recommend them above everyone else</h3>
-      <p>We've done a lot of tours across a lot of places, and very few earn an unqualified recommendation. This one does. If you want world-class reefs, a crew that treats safety and hospitality as equally sacred, and a shot at swimming beside nurse sharks and eagle rays in one of the planet's great marine reserves, this is the trip. We highly recommend San Pedro Adventure Tours, and we'd book them again in a heartbeat.</p>
-    </article>
-
-    <div class="ft-quick">
-      <div class="q"><b>Hol Chan &amp; Shark Ray Alley</b><span>Protected reef snorkeling</span></div>
-      <div class="q"><b>Safety First</b><span>Professional, friendly guides</span></div>
-      <div class="q"><b>Owner Eric</b><span>Personal, top-notch hospitality</span></div>
-    </div>
-
-    <p class="ft-contactline">
-      Ready to book the best day of your trip? Call <a href="tel:+50126029434">+501-602-9434</a>,
-      visit <a href="https://inlandandsea.com/" target="_blank" rel="noopener">inlandandsea.com</a>,
-      or check their <a href="https://share.google/Vn0x0nW3IYNnWDuLs" target="_blank" rel="noopener">Google reviews</a>.
-    </p>
-
-  </div>
-</section>
-
-<!-- ============ SOUVENIR SHOP ARTICLE (home page only, once) ============ -->
-<section class="souvenir-article" id="souvenirs">
-  <div class="wrap">
-    <span class="eyebrow">Local Find We Love</span>
-    <h2>Where to find one-of-a-kind Belizean souvenirs in San Pedro</h2>
-
-    <div class="sv-body">
-      <p>Every traveler wants to bring a little bit of Belize home, and the best keepsakes are never the mass-produced magnets you find at the airport. They are the hand-carved, hand-made pieces created by local artisans, each one slightly different from the next. In San Pedro on Ambergris Caye, one of the finest spots to hunt for these treasures is a friendly little souvenir shop on Seaweed Street where you simply ask for Angelita.</p>
-
-      <p>Step inside and you are surrounded by the work of Belizean hands. Rows of hardwood carvings line the shelves, from sleek dolphins and sea turtles to intricate jaguars and manatees, each shaped from local woods like mahogany and ziricote. Beside them sit hand-painted Maya masks, polished conch shells, beaded jewelry, and colorful zericote bowls. Because everything is carved and finished by hand, no two pieces are ever exactly alike, so the turtle you choose is truly yours alone.</p>
-    </div>
-
-    <!-- clean full-size flyer image, no overlay -->
-    <div class="sv-flyer">
-      <span class="sv-tag">Sponsored &middot; Local Shop</span>
-      <img src="/images/san-pedro-belize-souvenirs.png" alt="Handmade Belize souvenirs, wood carvings, shells and masks at Angelita's souvenir shop on Seaweed Street, San Pedro, Belize — spend $100 USD get 10% off">
-    </div>
-
-    <div class="sv-body">
-      <p>What makes this shop special is the story behind the shelves. These are not factory goods shipped in from overseas. They are made by Belizean artisans who have spent years perfecting their craft, and buying directly from them puts your money straight into the local community. When you pick out a carving here, you are supporting a family, a tradition, and a way of life that keeps Belizean folk art alive.</p>
-
-      <p>If you are on the island, it is well worth a visit. You will find the shop on Seaweed Street in San Pedro, and right now they are running a simple deal for travelers: spend $100 USD in-store and take 10% off your purchase. Ask for Angelita, take your time browsing, and you will walk out with a genuine, one-of-a-kind piece of Belize that no one else will have. Give them a call at <a href="tel:+5016666283">+501-666-6283</a> if you want to check hours before you head over.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ============ INTRO ============ -->
 <section class="intro">
   <div class="wrap">
@@ -653,8 +477,8 @@ footer a:hover{color:var(--mango)}
       <dl>
         <dt>Language</dt><dd>English (plus Kriol, Spanish, Garifuna)</dd>
         <dt>Currency</dt><dd>Belize dollar, pegged 2:1 to USD</dd>
-        <dt>Best time</dt><dd>Nov&ndash;May dry season; Jun&ndash;Nov green season deals</dd>
-        <dt>Trip length</dt><dd>5&ndash;7 days is the sweet spot</dd>
+        <dt>Best time</dt><dd>Nov–May dry season; Jun–Nov green season deals</dd>
+        <dt>Trip length</dt><dd>5–7 days is the sweet spot</dd>
         <dt>Top region</dt><dd>Cayo for jungle, Cayes for reef</dd>
         <dt>Famous for</dt><dd>Barrier Reef, Blue Hole, Maya ruins, caves</dd>
         <dt>Getting around</dt><dd>Domestic flights, water taxis, golf carts</dd>
@@ -673,7 +497,7 @@ footer a:hover{color:var(--mango)}
         <h3>Run a tour or hotel in Belize? Get found first.</h3>
         <p>Belize SEO Agency helps local tour operators, resorts and restaurants rank on Google and AI search, so travelers book you instead of the big platforms.</p>
       </div>
-      <span class="ad-cta">Grow My Bookings &rarr;</span>
+      <span class="ad-cta">Grow My Bookings →</span>
     </a>
   </div>
 </div>
@@ -729,25 +553,6 @@ footer a:hover{color:var(--mango)}
   </div>
 </section>
 
-<!-- ============ LOWER ADVENTURE AD BAND (Inland & Sea, placement 2 of 2) ============ -->
-<section class="adv-band" id="adventure-tours">
-  <div class="wrap">
-    <div class="adv-head">
-      <span class="eyebrow">Book The Best Day Of Your Trip</span>
-      <h2>Snorkel Hol Chan &amp; Shark Ray Alley with <span class="hl">San Pedro Adventure Tours</span></h2>
-      <p>Our #1 recommended tour company in Belize. Protected reefs, nurse sharks, eagle rays, and a crew that puts your safety and good time first.</p>
-    </div>
-    <a href="https://inlandandsea.com/" target="_blank" rel="noopener" class="adv-ad">
-      <span class="ft-adtag">Sponsored &middot; Inland &amp; Sea</span>
-      <img src="/images/san-pedro-adventure-tours.png" alt="San Pedro Adventure Tours by Inland and Sea, snorkeling Hol Chan and Shark Ray Alley in Belize — call +501-602-9434">
-    </a>
-    <div class="ft-cta-row">
-      <a href="tel:+50126029434" class="ft-btn call">&#128222; Call +501-602-9434</a>
-      <a href="https://inlandandsea.com/" target="_blank" rel="noopener" class="ft-btn site">&#127758; inlandandsea.com</a>
-      <a href="https://share.google/Vn0x0nW3IYNnWDuLs" target="_blank" rel="noopener" class="ft-btn reviews">&#11088; Read Google Reviews</a>
-    </div>
-  </div>
-</section>
 
 <!-- ============ LONG-FORM GUIDE ============ -->
 <section class="intro" id="guide" style="background:var(--sand-soft)">
@@ -841,31 +646,13 @@ footer a:hover{color:var(--mango)}
           <h3>My Belize trip <span id="countPill" style="font-size:.85rem;color:#9fd0db;font-weight:400">(0)</span></h3>
         </div>
         <div id="dropzone">
-          <div class="empty-note" id="emptyNote"><span>&#127965;&#65039;</span>Drop activities here to start your bucket list</div>
+          <div class="empty-note" id="emptyNote"><span>🏝️</span>Drop activities here to start your bucket list</div>
         </div>
         <div class="planner-actions">
-          <button class="pbtn print" id="printBtn">&#128424;&#65039; Print list</button>
-          <button class="pbtn email" id="emailBtn">&#9993;&#65039; Email to me</button>
+          <button class="pbtn print" id="printBtn">🖨️ Print list</button>
+          <button class="pbtn email" id="emailBtn">✉️ Email to me</button>
           <button class="pbtn clear" id="clearBtn">Clear</button>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ICE CREAM AD (kept well away from adventure & souvenir ads) ============ -->
-<section class="icecream-band" id="icecream">
-  <div class="wrap">
-    <div class="icecream-inner">
-      <div class="ic-copy">
-        <span class="eyebrow">Sweet Local Stop</span>
-        <h3>Cool off with the best ice cream in San Pedro</h3>
-        <p>All that snorkeling and sightseeing works up a serious craving. When the island heat hits, treat yourself to fresh, handmade ice cream in the heart of San Pedro &mdash; a favorite little pit stop for families and beach wanderers alike.</p>
-        <p>Grab a scoop, find a shady spot, and watch island life roll by. It's the simple, sweet kind of moment that makes a Belize day perfect.</p>
-      </div>
-      <div class="ic-img">
-        <span class="ft-adtag">Sponsored</span>
-        <img src="/images/san-pedro-belize-icecream.png" alt="Best handmade ice cream shop in San Pedro, Belize">
       </div>
     </div>
   </div>
@@ -882,22 +669,22 @@ footer a:hover{color:var(--mango)}
     <div class="tips-grid">
       <div class="tips-main">
         <div class="tip-block">
-          <h3><span class="ic">&#128197;</span>When to visit Belize</h3>
+          <h3><span class="ic">📅</span>When to visit Belize</h3>
           <p>The dry season runs from late November through May. Skies stay clear, seas stay calm, and reef trips run on schedule. That's why it's also the busiest and priciest window, peaking around Easter. If you want the same weather for less, aim for April or early May.</p>
           <p>The green season, June through November, brings afternoon showers and lush jungle. Prices drop, sometimes by 20 to 40 percent, and August is often the cheapest month of all. Hurricane risk peaks in September and October, so build in flexibility and lean on inland trips if you travel then.</p>
         </div>
         <div class="tip-block">
-          <h3><span class="ic">&#128181;</span>Money and budgeting</h3>
+          <h3><span class="ic">💵</span>Money and budgeting</h3>
           <p>Belize is not the cheapest country in Central America, but it's easy to manage. The Belize dollar is locked at two to one with the US dollar, so the math is simple. Carry small bills for buses, fruit stands and roadside food. Cards work in towns and resorts, but cash rules in villages.</p>
           <p>To save, eat where locals eat. Fry jacks for breakfast and rice and beans for lunch cost a few dollars. Book local guides directly when you can. Public buses are cheap and full of local life, though domestic flights save serious time between the islands and the south.</p>
         </div>
         <div class="tip-block">
-          <h3><span class="ic">&#128507;</span>Staying safe and being a good guest</h3>
+          <h3><span class="ic">🛟</span>Staying safe and being a good guest</h3>
           <p>Tourist areas like San Pedro, Caye Caulker, Placencia and San Ignacio are generally safe. Use normal travel sense, keep valuables secure, and book with reputable operators. Belize City has rougher pockets, so most visitors pass through quickly on the way to the islands or jungle.</p>
           <p>Respect the reef and the wildlife. Wear reef-safe sunscreen, never touch coral, and don't feed the animals. Support family-run lodges and local guides. Belize protects about half its land and sea, and travelers who tread lightly help keep it that way.</p>
         </div>
         <div class="tip-block">
-          <h3><span class="ic">&#127890;</span>What to pack and book ahead</h3>
+          <h3><span class="ic">🎒</span>What to pack and book ahead</h3>
           <p>Pack light, quick-dry clothes, water shoes, bug spray and reef-safe sunscreen. Bring a dry bag for boat days. Popular tours like the ATM Cave, the Great Blue Hole and whale shark trips sell out, so reserve those a few days ahead in busy season. Most island snorkeling trips you can grab the day before.</p>
         </div>
       </div>
@@ -906,10 +693,10 @@ footer a:hover{color:var(--mango)}
       <aside class="sky">
         <div class="ad-sky">
           <span class="lab">Sponsored</span>
-          <div class="globe">&#127758;</div>
+          <div class="globe">🌎</div>
           <div class="big">Rank #1 in Belize</div>
           <p>Tour operators, hotels and restaurants: get found by travelers searching Google and AI tools. Belize SEO Agency builds sites that book.</p>
-          <a href="https://belizeseoagency.com/" target="_blank" rel="noopener" class="sky-cta">Free SEO Audit &rarr;</a>
+          <a href="https://belizeseoagency.com/" target="_blank" rel="noopener" class="sky-cta">Free SEO Audit →</a>
         </div>
       </aside>
     </div>
@@ -932,7 +719,7 @@ footer a:hover{color:var(--mango)}
   <div class="wrap">
     <h2>Ready to build your Belize trip?</h2>
     <p>Scroll back up, pick your favorite activities, and drop them into your free bucket list. Print it, email it, and go.</p>
-    <a href="#planner" class="fbtn">Open my trip planner &uarr;</a>
+    <a href="#planner" class="fbtn">Open my trip planner ↑</a>
   </div>
 </section>
 
@@ -941,7 +728,7 @@ footer a:hover{color:var(--mango)}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-logo-wrap"><img src="/images/belize-snorkeling.jpg" alt="Things To Do In Belize logo"></div>
+        <div class="flogo">Things To Do <b>Belize</b></div>
         <p>Your independent 2026 guide to the best things to do in Belize, from the barrier reef to the Maya ruins. Real tips, no fluff.</p>
       </div>
       <div>
@@ -981,7 +768,7 @@ footer a:hover{color:var(--mango)}
   </div>
 </footer>
 
-<button id="floatPlan">&#128506;&#65039; My Trip <span class="badge" id="floatCount">0</span></button>
+<button id="floatPlan">🗺️ My Trip <span class="badge" id="floatCount">0</span></button>
 <div id="toast"><span class="dot"></span><span id="toastMsg">Added!</span></div>
 
 <script>
@@ -1087,8 +874,8 @@ function renderPool(){
     el.draggable=true;
     el.dataset.id=a.id;
     el.style.opacity = inList ? .45 : 1;
-    el.innerHTML = `<div><span>${a.n}</span><small>${a.w} \u00b7 ${a.price}</small></div>
-      <button class="qadd" data-id="${a.id}" aria-label="Add ${a.n}">${inList?'\u2713':'+'}</button>`;
+    el.innerHTML = `<div><span>${a.n}</span><small>${a.w} · ${a.price}</small></div>
+      <button class="qadd" data-id="${a.id}" aria-label="Add ${a.n}">${inList?'✓':'+'}</button>`;
     poolList.appendChild(el);
   });
 }
@@ -1106,7 +893,7 @@ function renderMine(){
       const a=byId(id); if(!a) return;
       const el=document.createElement('div');
       el.className='mine';
-      el.innerHTML=`<div><b>${a.n}</b><small>${a.w} \u00b7 ${a.price}</small></div><button class="rm" data-id="${id}" aria-label="Remove">\u00d7</button>`;
+      el.innerHTML=`<div><b>${a.n}</b><small>${a.w} · ${a.price}</small></div><button class="rm" data-id="${id}" aria-label="Remove">×</button>`;
       dropzone.appendChild(el);
     });
   }
@@ -1172,7 +959,7 @@ function runSearch(q){
     hits.slice(0,8).forEach(a=>{
       const el=document.createElement('div');
       el.className='sr-item';
-      el.innerHTML=`<div><b>${a.n}</b><span>${a.w} \u00b7 ${a.price}</span></div><button class="sr-add" data-id="${a.id}">+ Add</button>`;
+      el.innerHTML=`<div><b>${a.n}</b><span>${a.w} · ${a.price}</span></div><button class="sr-add" data-id="${a.id}">+ Add</button>`;
       searchResults.appendChild(el);
     });
   }
@@ -1193,9 +980,9 @@ document.getElementById('printBtn').addEventListener('click',()=>{
   const w=window.open('','_blank');
   w.document.write(`<html><head><title>My Belize Trip</title></head><body style="font-family:Arial,sans-serif;max-width:700px;margin:30px auto;padding:0 20px;color:#0c2230">
     <h1 style="color:#0a6e8c">My Belize Bucket List</h1>
-    <p style="color:#555">${myList.length} things to do in Belize \u00b7 ThingsToDoBelize.com</p>
+    <p style="color:#555">${myList.length} things to do in Belize · ThingsToDoBelize.com</p>
     <table style="width:100%;border-collapse:collapse;margin-top:16px"><thead><tr style="background:#0a6e8c;color:#fff;text-align:left"><th style="padding:10px 12px">#</th><th style="padding:10px 12px">Activity</th><th style="padding:10px 12px">Where</th><th style="padding:10px 12px">From</th></tr></thead><tbody>${rows}</tbody></table>
-    <p style="margin-top:24px;color:#888;font-size:13px">Generated at ThingsToDoBelize.com &copy; 2026 \u00b7 Powered by Eye To Ad Media</p>
+    <p style="margin-top:24px;color:#888;font-size:13px">Generated at ThingsToDoBelize.com &copy; 2026 · Powered by Eye To Ad Media</p>
     </body></html>`);
   w.document.close(); setTimeout(()=>w.print(),350);
 });
@@ -1243,3 +1030,4 @@ document.getElementById('floatPlan').addEventListener('click',()=>{
 </script>
 </body>
 </html>
+
