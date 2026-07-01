@@ -191,6 +191,24 @@ header.nav{
 .fb2{bottom:14%;left:-4%;animation-delay:1.4s}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 
+/* ---------- SOUVENIR TOP-FOLD AD ---------- */
+.souvenir-ad-band{padding:26px 0 0}
+.souvenir-ad{display:flex;align-items:center;gap:1.6rem;background:linear-gradient(120deg,#fff 0%,var(--sand-soft) 100%);border:1px solid rgba(10,110,140,.14);border-radius:20px;padding:1rem 1.4rem;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;transition:.25s}
+.souvenir-ad:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.souvenir-ad .lab{position:absolute;top:.7rem;right:1.1rem;font-family:'Space Grotesk',monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.souvenir-ad .sv-img{width:150px;height:150px;flex-shrink:0;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);border:3px solid #fff}
+.souvenir-ad .sv-img img{width:100%;height:100%;object-fit:cover}
+.souvenir-ad .sv-txt{flex:1;min-width:0}
+.souvenir-ad .sv-txt h3{font-size:1.35rem;margin-bottom:.25rem;color:var(--ink)}
+.souvenir-ad .sv-txt p{font-size:.95rem;max-width:56ch;color:var(--ink-soft)}
+.souvenir-ad .sv-cta{background:var(--coral);color:#fff;font-weight:700;padding:.75rem 1.4rem;border-radius:40px;white-space:nowrap;flex-shrink:0;box-shadow:0 10px 20px -8px var(--coral);transition:.2s}
+.souvenir-ad:hover .sv-cta{transform:scale(1.04)}
+@media(max-width:680px){
+  .souvenir-ad{flex-direction:column;text-align:center;padding:1.4rem 1.2rem}
+  .souvenir-ad .lab{position:static;margin-bottom:.4rem}
+  .souvenir-ad .sv-cta{width:100%;text-align:center}
+}
+
 /* ---------- SEARCH TOOL ---------- */
 .searchbox{
   margin-top:2.2rem;background:#fff;border-radius:22px;padding:1.5rem;box-shadow:var(--shadow);
@@ -459,6 +477,23 @@ footer a:hover{color:var(--mango)}
     </div>
   </div>
 </section>
+
+<!-- ============ SOUVENIR TOP-FOLD AD (home page only, once) ============ -->
+<div class="souvenir-ad-band">
+  <div class="wrap">
+    <a href="https://belizeseoagency.com/" target="_blank" rel="noopener" class="souvenir-ad">
+      <span class="lab">Sponsored</span>
+      <div class="sv-img">
+        <img src="/images/san-pedro-belize-souvenirs.png" alt="San Pedro Belize souvenirs and local gift shop finds">
+      </div>
+      <div class="sv-txt">
+        <h3>Take home a piece of San Pedro</h3>
+        <p>Hand-picked Belize souvenirs, local crafts and island keepsakes from the heart of San Pedro. Support local makers and remember your trip long after the tan fades.</p>
+      </div>
+      <span class="sv-cta">Shop Souvenirs →</span>
+    </a>
+  </div>
+</div>
 
 <!-- ============ INTRO ============ -->
 <section class="intro">
