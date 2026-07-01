@@ -192,22 +192,16 @@ header.nav{
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 
 /* ---------- SOUVENIR TOP-FOLD AD ---------- */
-.souvenir-ad-band{padding:26px 0 0}
-.souvenir-ad{display:block;position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(10,110,140,.12);transition:.25s}
-.souvenir-ad:hover{transform:translateY(-3px)}
-.souvenir-ad .sv-img{display:block;width:100%}
-.souvenir-ad .sv-img img{width:100%;height:auto;display:block}
-.souvenir-ad .lab{position:absolute;top:1rem;right:1.2rem;z-index:3;font-family:'Space Grotesk',monospace;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(12,34,48,.55);padding:.3rem .7rem;border-radius:30px;backdrop-filter:blur(4px)}
-.souvenir-ad .sv-txt{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:2.4rem 2rem 1.8rem;background:linear-gradient(180deg,transparent,rgba(6,59,84,.15) 30%,rgba(6,59,84,.88));display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.souvenir-ad .sv-copy{flex:1;min-width:240px}
-.souvenir-ad .sv-txt h3{font-size:clamp(1.4rem,2.6vw,2.1rem);margin-bottom:.35rem;color:#fff}
-.souvenir-ad .sv-txt p{font-size:1rem;max-width:60ch;color:#eaf7fa}
-.souvenir-ad .sv-cta{background:var(--coral);color:#fff;font-weight:700;padding:.85rem 1.6rem;border-radius:40px;white-space:nowrap;flex-shrink:0;box-shadow:0 10px 20px -8px var(--coral);transition:.2s}
-.souvenir-ad:hover .sv-cta{transform:scale(1.04)}
-@media(max-width:680px){
-  .souvenir-ad .sv-txt{padding:1.8rem 1.3rem 1.3rem;flex-direction:column;align-items:stretch;text-align:center}
-  .souvenir-ad .sv-cta{width:100%;text-align:center}
-}
+/* ---------- SOUVENIR SHOP ARTICLE ---------- */
+.souvenir-article{background:var(--white);padding:56px 0}
+.souvenir-article .eyebrow{color:var(--coral)}
+.souvenir-article h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:900;margin:.5rem 0 1.4rem;color:var(--ink);max-width:24ch}
+.souvenir-article .sv-body{max-width:760px}
+.souvenir-article .sv-body p{margin-bottom:1.1rem;font-size:1.06rem}
+.souvenir-article .sv-body a{color:var(--reef);font-weight:600}
+.sv-flyer{position:relative;margin:1.8rem 0;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(10,110,140,.12)}
+.sv-flyer img{width:100%;height:auto;display:block}
+.sv-flyer .sv-tag{position:absolute;top:1rem;right:1.1rem;z-index:2;font-family:'Space Grotesk',monospace;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(12,34,48,.6);padding:.32rem .75rem;border-radius:30px;backdrop-filter:blur(4px)}
 
 /* ---------- SEARCH TOOL ---------- */
 .searchbox{
@@ -478,24 +472,31 @@ footer a:hover{color:var(--mango)}
   </div>
 </section>
 
-<!-- ============ SOUVENIR TOP-FOLD AD (home page only, once) ============ -->
-<div class="souvenir-ad-band">
+<!-- ============ SOUVENIR SHOP ARTICLE (home page only, once) ============ -->
+<section class="souvenir-article" id="souvenirs">
   <div class="wrap">
-    <a href="https://belizeseoagency.com/" target="_blank" rel="noopener" class="souvenir-ad">
-      <span class="lab">Sponsored</span>
-      <div class="sv-img">
-        <img src="/images/san-pedro-belize-souvenirs.png" alt="San Pedro Belize souvenirs and local gift shop finds">
-      </div>
-      <div class="sv-txt">
-        <div class="sv-copy">
-          <h3>Take home a piece of San Pedro</h3>
-          <p>Hand-picked Belize souvenirs, local crafts and island keepsakes from the heart of San Pedro. Support local makers and remember your trip long after the tan fades.</p>
-        </div>
-        <span class="sv-cta">Shop Souvenirs →</span>
-      </div>
-    </a>
+    <span class="eyebrow">Local Find We Love</span>
+    <h2>Where to find one-of-a-kind Belizean souvenirs in San Pedro</h2>
+
+    <div class="sv-body">
+      <p>Every traveler wants to bring a little bit of Belize home, and the best keepsakes are never the mass-produced magnets you find at the airport. They are the hand-carved, hand-made pieces created by local artisans, each one slightly different from the next. In San Pedro on Ambergris Caye, one of the finest spots to hunt for these treasures is a friendly little souvenir shop on Seaweed Street where you simply ask for Angelita.</p>
+
+      <p>Step inside and you are surrounded by the work of Belizean hands. Rows of hardwood carvings line the shelves, from sleek dolphins and sea turtles to intricate jaguars and manatees, each shaped from local woods like mahogany and ziricote. Beside them sit hand-painted Maya masks, polished conch shells, beaded jewelry, and colorful zericote bowls. Because everything is carved and finished by hand, no two pieces are ever exactly alike, so the turtle you choose is truly yours alone.</p>
+    </div>
+
+    <!-- clean full-size flyer image, no overlay -->
+    <div class="sv-flyer">
+      <span class="sv-tag">Sponsored · Local Shop</span>
+      <img src="/images/san-pedro-belize-souvenirs.png" alt="Handmade Belize souvenirs, wood carvings, shells and masks at Angelita's souvenir shop on Seaweed Street, San Pedro, Belize — spend $100 USD get 10% off">
+    </div>
+
+    <div class="sv-body">
+      <p>What makes this shop special is the story behind the shelves. These are not factory goods shipped in from overseas. They are made by Belizean artisans who have spent years perfecting their craft, and buying directly from them puts your money straight into the local community. When you pick out a carving here, you are supporting a family, a tradition, and a way of life that keeps Belizean folk art alive.</p>
+
+      <p>If you are on the island, it is well worth a visit. You will find the shop on Seaweed Street in San Pedro, and right now they are running a simple deal for travelers: spend $100 USD in-store and take 10% off your purchase. Ask for Angelita, take your time browsing, and you will walk out with a genuine, one-of-a-kind piece of Belize that no one else will have. Give them a call at <a href="tel:+5016666283">+501-666-6283</a> if you want to check hours before you head over.</p>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- ============ INTRO ============ -->
 <section class="intro">
